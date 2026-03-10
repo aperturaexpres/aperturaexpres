@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apertura Expres | Cerrajero 24h Paiporta | 633 90 97 55</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --naranja: #f7a01d; 
+            --azul: #1d2c67; 
+            --blanco: #ffffff;
+            --gris: #f4f4f4;
+            --whatsapp: #25D366;
+        }
+
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; }
+
+        header {
+            background: var(--blanco);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--naranja);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo img { height: 70px; }
+        .header-info { text-align: right; }
+        .header-info a { color: var(--azul); font-weight: bold; text-decoration: none; font-size: 1.4rem; }
+
+        .hero {
+            background: var(--azul);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; margin: 0; color: var(--naranja); text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; margin: 15px 0 30px; }
+        
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn {
+            padding: 15px 30px; border-radius: 5px; font-weight: bold; text-decoration: none; 
+            font-size: 1.2rem; display: flex; align-items: center; gap: 10px; transition: 0.3s;
+        }
+        .btn-tel { background: var(--naranja); color: var(--azul); }
+        .btn-wa { background: var(--whatsapp); color: white; }
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        .servicios { padding: 50px 5%; max-width: 1200px; margin: auto; }
+        .servicios h2 { text-align: center; color: var(--azul); margin-bottom: 40px; font-size: 2rem; border-bottom: 2px solid var(--naranja); display: inline-block; width: 100%; padding-bottom: 10px; }
+        
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--gris);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #ddd;
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-body h3 { color: var(--azul); margin: 0 0 10px; font-size: 1.3rem; }
+        .card-body p { font-size: 0.95rem; line-height: 1.4; color: #555; }
+
+        .footer-top {
+            background: #eee;
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .map iframe { width: 100%; height: 300px; border: 0; border-radius: 10px; }
+        
+        .contact-info h3 { color: var(--azul); margin-top: 0; }
+        .redes { margin-top: 20px; }
+        .redes a { color: var(--azul); font-size: 2.2rem; margin-right: 20px; text-decoration: none; transition: 0.3s; }
+        .redes a:hover { color: var(--naranja); transform: translateY(-3px); display: inline-block; }
+
+        footer { background: var(--azul); color: white; text-align: center; padding: 20px; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .header-info { margin-top: 10px; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="image_1.png" alt="Apertura Expres"></div>
+    <div class="header-info">
+        <span>Urgencias 24h:</span><br>
+        <a href="tel:+34633909755">633 90 97 55</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Cerrajería Urgente en Paiporta</h1>
+    <p>Seguridad avanzada y aperturas sin daños. Servicio profesional 24 horas.</p>
+    <div class="cta-buttons">
+        <a href="tel:+34633909755" class="btn btn-tel"><i class="fas fa-phone-alt"></i> LLAMAR AHORA</a>
+        <a href="https://wa.me/34633909755?text=Hola,%20necesito%20un%20cerrajero%20urgente" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+    </div>
+</section>
+
+<section class="servicios">
+    <h2>Servicios Profesionales de Seguridad</h2>
+    <div class="grid-servicios">
+        <div class="card">
+            <img src="bombillo.jpg" alt="Bombillos">
+            <div class="card-body">
+                <h3>Bombillos de Seguridad</h3>
+                <p>Instalación de cilindros de alta gama con protección certificada contra ataques técnicos.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cerradura.jpg" alt="Cerraduras">
+            <div class="card-body">
+                <h3>Cerraduras Especializadas</h3>
+                <p>Sustitución y mejora de mecanismos de cierre para garantizar la máxima resistencia estructural.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cerrojo.jpg" alt="Cerrojos">
+            <div class="card-body">
+                <h3>Cerrojos de Seguridad</h3>
+                <p>Refuerce su puerta con puntos de cierre adicionales diseñados para la disuasión y protección.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="inteligente.jpg" alt="Inteligentes">
+            <div class="card-body">
+                <h3>Cerrajería Digital</h3>
+                <p>Sistemas inteligentes de control de acceso. Seguridad moderna con gestión biométrica y móvil.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer-top">
+    <div class="contact-info">
+        <h3>Apertura Expres Paiporta</h3>
+        <p>📍 Av. Francesc Ciscar, 18 bajo, 46200 Paiporta, Valencia</p>
+        <p>📞 633 90 97 55</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/aperturaexpres?igsh=cHpqM2N0dXRncm44" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1GexHLmRu3/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@aperturaexpres?_r=1&_t=ZN-94ZQ3fTh5ew" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.714424759681!2d-0.419407323493457!3d39.43118931441589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f378037326b%3A0xc0f171739c94757c!2sAv.%20de%20Francesc%20C%C3%ADscar%2C%2018%2C%2046200%20Paiporta%2C%20Valencia!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Apertura Expres - Cerrajería Profesional en Paiporta</p>
+</footer>
+
+</body>
+</html>
