@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,106 +7,25 @@
     <title>Apertura Expres | Cerrajero 24h Paiporta | 633 90 97 55</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --naranja: #f7a01d; 
-            --azul: #1d2c67; 
-            --blanco: #ffffff;
-            --gris: #f4f4f4;
-            --whatsapp: #25D366;
-        }
-
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; padding: 0; color: #333; -webkit-font-smoothing: antialiased; }
-
-        header {
-            background: var(--blanco);
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--naranja);
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .logo img { height: 60px; width: auto; }
-        .header-info { text-align: right; }
-        .header-info a { color: var(--azul); font-weight: bold; text-decoration: none; font-size: 1.2rem; display: block; }
-
-        .hero {
-            background: var(--azul);
-            color: white;
-            padding: 50px 5%;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.2rem; margin: 0; color: var(--naranja); text-transform: uppercase; }
-        .hero p { font-size: 1.1rem; margin: 15px 0 30px; }
-        
-        .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn {
-            padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; 
-            font-size: 1.1rem; display: flex; align-items: center; gap: 10px; transition: 0.3s;
-        }
-        .btn-tel { background: var(--naranja); color: var(--azul); }
-        .btn-wa { background: var(--whatsapp); color: white; }
-        
-        .servicios { padding: 40px 5%; max-width: 1200px; margin: auto; }
-        .servicios h2, .testimonios h2 { text-align: center; color: var(--azul); margin-bottom: 30px; font-size: 1.8rem; border-bottom: 2px solid var(--naranja); display: block; padding-bottom: 10px; }
-        
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: var(--gris);
-            border-radius: 12px;
-            overflow: hidden;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { color: var(--azul); margin: 0 0 10px; }
-
-        .testimonios { background: #fff; padding: 40px 5%; max-width: 1200px; margin: auto; }
-        .grid-testimonios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .testimonio-card { background: var(--gris); padding: 20px; border-radius: 10px; border-left: 5px solid var(--naranja); }
-        .stars { color: #f1c40f; margin-bottom: 10px; }
-        .testimonio-card p { font-style: italic; font-size: 0.95rem; }
-        .autor { font-weight: bold; color: var(--azul); display: block; margin-top: 10px; }
-
-        .footer-top {
-            background: #eee;
-            padding: 40px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        .map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 1px solid #ccc; }
-        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .contact-info h3 { color: var(--azul); margin-top: 0; }
-        .redes { margin-top: 20px; }
-        .redes a { color: var(--azul); font-size: 2.2rem; margin-right: 20px; text-decoration: none; display: inline-block; transition: 0.3s; }
-        .redes a:hover { color: var(--naranja); }
-
-        footer { background: var(--azul); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 10px; }
-            .header-info { text-align: center; }
-            .hero h1 { font-size: 1.7rem; }
-            .btn { width: 100%; justify-content: center; }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
 <header>
-    <div class="logo"><img src="image_1.png" alt="Apertura Expres Logo"></div>
+    <div class="logo"><img src="/assets/image_1.png" alt="Apertura Expres Logo"></div>
     <div class="header-info">
         <span>Urgencias 24h Paiporta:</span>
         <a href="tel:+34633909755">633 90 97 55</a>
+    </div>
+    <div class="mobile-menu-wrapper">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-section-menu" aria-label="Abrir menu de secciones">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="mobile-section-menu" id="mobile-section-menu" aria-label="Secciones ocultas en movil">
+            <button type="button" class="mobile-section-link" data-target="contacto">Contacto</button>
+            <button type="button" class="mobile-section-link" data-target="servicios">Servicios</button>
+            <button type="button" class="mobile-section-link" data-target="testimonios">Testimonios</button>
+        </nav>
     </div>
 </header>
 
@@ -119,56 +38,56 @@
     </div>
 </section>
 
-<section class="servicios">
+<section class="servicios mobile-collapsible-section" id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="grid-servicios">
         <div class="card">
-            <img src="bombillo.jpg" alt="Bombillos de seguridad">
+            <img src="/assets/bombillo.jpg" alt="Bombillos de seguridad">
             <div class="card-body">
                 <h3>Bombillos de Seguridad</h3>
                 <p>Protección avanzada contra bumping y ataques técnicos.</p>
             </div>
         </div>
         <div class="card">
-            <img src="cerradura.jpg" alt="Cerraduras profesionales">
+            <img src="/assets/cerradura.jpg" alt="Cerraduras profesionales">
             <div class="card-body">
                 <h3>Cerraduras Especializadas</h3>
                 <p>Sustitución de mecanismos para máxima resistencia.</p>
             </div>
         </div>
         <div class="card">
-            <img src="cerrojo.jpg" alt="Cerrojos de refuerzo">
+            <img src="/assets/cerrojo.jpg" alt="Cerrojos de refuerzo">
             <div class="card-body">
                 <h3>Cerrojos de Seguridad</h3>
                 <p>Puntos de cierre adicionales para su tranquilidad.</p>
             </div>
         </div>
         <div class="card">
-            <img src="inteligente.jpg" alt="Cerrajería digital">
+            <img src="/assets/inteligente.jpg" alt="CerrajerÃ­a digital">
             <div class="card-body">
-                <h3>Cerrajería Digital</h3>
-                <p>Control de acceso biométrico y gestión desde el móvil.</p>
+                <h3>Cerrajerí­a Digital</h3>
+                <p>Control de acceso biomÃ©trico y gestión desde el móvil.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="testimonios">
+<section class="testimonios mobile-collapsible-section" id="testimonios">
     <h2>Opiniones de Clientes</h2>
     <div class="grid-testimonios">
         <div class="testimonio-card">
-            <div class="stars">★★★★★</div>
-            <p>"Dos veces ha venido ya a abrirme la puerta de casa por haberme dejado un juego de llaves puestas… y siempre ha venido rapidísimo! Muy contenta con los servicios, recomendable 100%"</p>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Dos veces ha venido ya a abrirme la puerta de casa por haberme dejado un juego de llaves puestas... y siempre ha venido rapidísimo! Muy contenta con los servicios, recomendable 100%"</p>
             <span class="autor">- Nuria.</span>
         </div>
         <div class="testimonio-card">
-            <div class="stars">★★★★★</div>
-            <p>"Increíblemente rápido y profesional! Nos ha solucionado un problema en la empresa en 10 minutos! Sin dudar, muy recomendable !!"</p>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Increí­blemente rápido y profesional! Nos ha solucionado un problema en la empresa en 10 minutos! Sin dudar, muy recomendable !!"</p>
             <span class="autor">- Valin Picanya.</span>
         </div>
         <div class="testimonio-card">
-            <div class="stars">★★★★★</div>
-            <p>"El otro día tuvimos que hacer reparar una cerradura. Trabajo rápido, y precio de mercado. Totalmente recomendable."</p>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"El otro dí­a tuvimos que reparar una cerradura. Trabajo rápido, y precio de mercado. Totalmente recomendable."</p>
             <span class="autor">- Leonardo.</span>
         </div>
     </div>
@@ -186,13 +105,83 @@
         </div>
     </div>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.711818783457!2d-0.4215286!3d39.4312061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f3299719323%3A0x629555127cf73b88!2sApertura%20Expres%20-%20Cerrajeros%20Paiporta%2024h!5e0!3m2!1ses!2ses!4v1710150000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.656086699308!2d-0.4187579889638188!3d39.431900714872214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e5999c06105%3A0xde087d389bd2ebeb!2sAv.%20Francesc%20Ciscar%2C%2018%2C%2046200%20Paiporta%2C%20Val%C3%A8ncia!5e0!3m2!1sen!2ses!4v1773826970043!5m2!1sen!2ses"" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Apertura Expres - Cerrajería 24h en Paiporta</p>
+    <p>&copy; <span id="current-year">2026</span> Apertura Expres - Cerrajería 24h en Paiporta</p>
 </footer>
+
+<script>
+    (function () {
+        var menuToggle = document.querySelector('.mobile-menu-toggle');
+        var menu = document.querySelector('.mobile-section-menu');
+        var sectionLinks = document.querySelectorAll('.mobile-section-link');
+        var collapsibleSections = document.querySelectorAll('.mobile-collapsible-section');
+        var mobileQuery = window.matchMedia('(max-width: 768px)');
+
+        if (!menuToggle || !menu || !sectionLinks.length || !collapsibleSections.length) {
+            return;
+        }
+
+        function resetMobileSections() {
+            collapsibleSections.forEach(function (section) {
+                section.classList.remove('is-visible');
+            });
+        }
+
+        function closeMenu() {
+            menu.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function syncLayout(event) {
+            if (!event.matches) {
+                resetMobileSections();
+                closeMenu();
+            }
+        }
+
+        menuToggle.addEventListener('click', function () {
+            var isOpen = menu.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        sectionLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                var targetId = link.getAttribute('data-target');
+
+                if (targetId === 'contacto') {
+                    resetMobileSections();
+                    closeMenu();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
+                collapsibleSections.forEach(function (section) {
+                    section.classList.toggle('is-visible', section.id === targetId);
+                });
+
+                closeMenu();
+
+                var targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        syncLayout(mobileQuery);
+        mobileQuery.addEventListener('change', syncLayout);
+    }());
+</script>
 
 </body>
 </html>
