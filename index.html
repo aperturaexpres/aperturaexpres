@@ -7,103 +7,12 @@
     <title>Apertura Expres | Cerrajero 24h Paiporta | 633 90 97 55</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --naranja: #f7a01d; 
-            --azul: #1d2c67; 
-            --blanco: #ffffff;
-            --gris: #f4f4f4;
-            --whatsapp: #25D366;
-        }
-
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; padding: 0; color: #333; -webkit-font-smoothing: antialiased; }
-
-        header {
-            background: var(--blanco);
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--naranja);
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .logo img { height: 60px; width: auto; }
-        .header-info { text-align: right; }
-        .header-info a { color: var(--azul); font-weight: bold; text-decoration: none; font-size: 1.2rem; display: block; }
-
-        .hero {
-            background: var(--azul);
-            color: white;
-            padding: 50px 5%;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.2rem; margin: 0; color: var(--naranja); text-transform: uppercase; }
-        .hero p { font-size: 1.1rem; margin: 15px 0 30px; }
-        
-        .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn {
-            padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; 
-            font-size: 1.1rem; display: flex; align-items: center; gap: 10px; transition: 0.3s;
-        }
-        .btn-tel { background: var(--naranja); color: var(--azul); }
-        .btn-wa { background: var(--whatsapp); color: white; }
-        
-        .servicios { padding: 40px 5%; max-width: 1200px; margin: auto; }
-        .servicios h2, .testimonios h2 { text-align: center; color: var(--azul); margin-bottom: 30px; font-size: 1.8rem; border-bottom: 2px solid var(--naranja); display: block; padding-bottom: 10px; }
-        
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: var(--gris);
-            border-radius: 12px;
-            overflow: hidden;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { color: var(--azul); margin: 0 0 10px; }
-
-        .testimonios { background: #fff; padding: 40px 5%; max-width: 1200px; margin: auto; }
-        .grid-testimonios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .testimonio-card { background: var(--gris); padding: 20px; border-radius: 10px; border-left: 5px solid var(--naranja); }
-        .stars { color: #f1c40f; margin-bottom: 10px; }
-        .testimonio-card p { font-style: italic; font-size: 0.95rem; }
-        .autor { font-weight: bold; color: var(--azul); display: block; margin-top: 10px; }
-
-        .footer-top {
-            background: #eee;
-            padding: 40px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        .map-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 1px solid #ccc; }
-        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .contact-info h3 { color: var(--azul); margin-top: 0; }
-        .redes { margin-top: 20px; }
-        .redes a { color: var(--azul); font-size: 2.2rem; margin-right: 20px; text-decoration: none; display: inline-block; transition: 0.3s; }
-        .redes a:hover { color: var(--naranja); }
-
-        footer { background: var(--azul); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 10px; }
-            .header-info { text-align: center; }
-            .hero h1 { font-size: 1.7rem; }
-            .btn { width: 100%; justify-content: center; }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
 <header>
-    <div class="logo"><img src="image_1.png" alt="Apertura Expres Logo"></div>
+    <div class="logo"><img src="/assets/image_1.png" alt="Apertura Expres Logo"></div>
     <div class="header-info">
         <span>Urgencias 24h Paiporta:</span>
         <a href="tel:+34633909755">633 90 97 55</a>
@@ -123,28 +32,28 @@
     <h2>Nuestros Servicios</h2>
     <div class="grid-servicios">
         <div class="card">
-            <img src="bombillo.jpg" alt="Bombillos de seguridad">
+            <img src="/assets/bombillo.jpg" alt="Bombillos de seguridad">
             <div class="card-body">
                 <h3>Bombillos de Seguridad</h3>
                 <p>Protección avanzada contra bumping y ataques técnicos.</p>
             </div>
         </div>
         <div class="card">
-            <img src="cerradura.jpg" alt="Cerraduras profesionales">
+            <img src="/assets/cerradura.jpg" alt="Cerraduras profesionales">
             <div class="card-body">
                 <h3>Cerraduras Especializadas</h3>
                 <p>Sustitución de mecanismos para máxima resistencia.</p>
             </div>
         </div>
         <div class="card">
-            <img src="cerrojo.jpg" alt="Cerrojos de refuerzo">
+            <img src="/assets/cerrojo.jpg" alt="Cerrojos de refuerzo">
             <div class="card-body">
                 <h3>Cerrojos de Seguridad</h3>
                 <p>Puntos de cierre adicionales para su tranquilidad.</p>
             </div>
         </div>
         <div class="card">
-            <img src="inteligente.jpg" alt="Cerrajería digital">
+            <img src="/assets/inteligente.jpg" alt="Cerrajería digital">
             <div class="card-body">
                 <h3>Cerrajería Digital</h3>
                 <p>Control de acceso biométrico y gestión desde el móvil.</p>
