@@ -17,6 +17,16 @@
         <span>Urgencias 24h Paiporta:</span>
         <a href="tel:+34633909755">633 90 97 55</a>
     </div>
+    <div class="mobile-menu-wrapper">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-section-menu" aria-label="Abrir menu de secciones">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="mobile-section-menu" id="mobile-section-menu" aria-label="Secciones ocultas en movil">
+            <button type="button" class="mobile-section-link" data-target="contacto">Contacto</button>
+            <button type="button" class="mobile-section-link" data-target="servicios">Servicios</button>
+            <button type="button" class="mobile-section-link" data-target="testimonios">Testimonios</button>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
@@ -28,7 +38,7 @@
     </div>
 </section>
 
-<section class="servicios">
+<section class="servicios mobile-collapsible-section" id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="grid-servicios">
         <div class="card">
@@ -62,7 +72,7 @@
     </div>
 </section>
 
-<section class="testimonios">
+<section class="testimonios mobile-collapsible-section" id="testimonios">
     <h2>Opiniones de Clientes</h2>
     <div class="grid-testimonios">
         <div class="testimonio-card">
@@ -102,6 +112,76 @@
 <footer>
     <p>© 2026 Apertura Expres - Cerrajería 24h en Paiporta</p>
 </footer>
+
+<script>
+    (function () {
+        var menuToggle = document.querySelector('.mobile-menu-toggle');
+        var menu = document.querySelector('.mobile-section-menu');
+        var sectionLinks = document.querySelectorAll('.mobile-section-link');
+        var collapsibleSections = document.querySelectorAll('.mobile-collapsible-section');
+        var mobileQuery = window.matchMedia('(max-width: 768px)');
+
+        if (!menuToggle || !menu || !sectionLinks.length || !collapsibleSections.length) {
+            return;
+        }
+
+        function resetMobileSections() {
+            collapsibleSections.forEach(function (section) {
+                section.classList.remove('is-visible');
+            });
+        }
+
+        function closeMenu() {
+            menu.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function syncLayout(event) {
+            if (!event.matches) {
+                resetMobileSections();
+                closeMenu();
+            }
+        }
+
+        menuToggle.addEventListener('click', function () {
+            var isOpen = menu.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        sectionLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                var targetId = link.getAttribute('data-target');
+
+                if (targetId === 'contacto') {
+                    resetMobileSections();
+                    closeMenu();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
+                collapsibleSections.forEach(function (section) {
+                    section.classList.toggle('is-visible', section.id === targetId);
+                });
+
+                closeMenu();
+
+                var targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        syncLayout(mobileQuery);
+        mobileQuery.addEventListener('change', syncLayout);
+    }());
+</script>
 
 </body>
 </html>
