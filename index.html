@@ -9,6 +9,40 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Estilos nuevos para los botones de los pueblos */
+        .zonas-servicio {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .grid-pueblos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            max-width: 1000px;
+            margin: 20px auto 0;
+        }
+        .btn-pueblo {
+            display: block;
+            padding: 15px 10px;
+            background-color: #333;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            border: none;
+        }
+        .btn-pueblo:hover {
+            background-color: #ff9800;
+        }
+        @media (max-width: 480px) {
+            .grid-pueblos { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
 </head>
 
 <body>
@@ -51,11 +85,24 @@
     </div>
 </section>
 
+<section class="zonas-servicio">
+    <h2>Zonas de Servicio Urgente</h2>
+    <p>Llegamos en menos de 20 minutos a:</p>
+    <div class="grid-pueblos">
+        <a href="picanya.html" class="btn-pueblo">PICANYA</a>
+        <a href="massanassa.html" class="btn-pueblo">MASSANASSA</a>
+        <a href="catarroja.html" class="btn-pueblo">CATARROJA</a>
+        <a href="benetusser.html" class="btn-pueblo">BENETÚSSER</a>
+        <a href="sedavi.html" class="btn-pueblo">SEDAVÍ</a>
+        <a href="torrent.html" class="btn-pueblo">TORRENT</a>
+        <a href="beniparrell.html" class="btn-pueblo">BENIPARRELL</a>
+    </div>
+</section>
+
 <section class="servicios mobile-collapsible-section" id="servicios">
     <h2>Nuestros Servicios</h2>
 
     <div class="grid-servicios">
-
         <div class="card">
             <img src="assets/bombillo.jpg" alt="Bombillos de seguridad">
             <div class="card-body">
@@ -87,7 +134,6 @@
                 <p>Control de acceso biométrico y gestión desde el móvil.</p>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -95,7 +141,6 @@
     <h2>Opiniones de Clientes</h2>
 
     <div class="grid-testimonios">
-
         <div class="testimonio-card">
             <div class="stars">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -119,7 +164,6 @@
             <p>"Trabajo rápido y buen precio. Totalmente recomendable."</p>
             <span class="autor">- Leonardo.</span>
         </div>
-
     </div>
 </section>
 
