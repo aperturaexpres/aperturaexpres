@@ -2,288 +2,200 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="format-detection" content="telephone=no"> 
-
-    <title>Cerrajero 24h en Paiporta | Apertura Expres | Urgente 20 min</title>
-
-    <meta name="description" content="Apertura Expres: Cerrajero 24 horas en Paiporta. Especialistas en apertura de puertas, bombines de alta seguridad y urgencias. Llegamos en 20 min. Llámanos al 633 90 97 55.">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apertura Expres | Cerrajero 24h</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    
     <style>
-        /* Navegación */
-        nav.main-nav {
-            background: #222;
-            padding: 12px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav.main-nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-        nav.main-nav a:hover { color: #ff9800; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        
+        /* Header (image_1e2698.png) */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; background: #fff; }
+        .logo img { height: 60px; }
+        .header-contact { text-align: right; }
+        .header-contact p { margin: 0; font-size: 0.9rem; font-weight: bold; }
+        .header-contact .phone { color: #1a237e; font-size: 1.4rem; font-weight: 900; text-decoration: none; }
 
-        /* Galería de Trabajos Reales */
-        .galeria-trabajos { padding: 40px 20px; background: #fff; text-align: center; }
-        .grid-galeria { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 15px; 
-            max-width: 1100px; 
-            margin: 20px auto; 
-        }
-        .grid-galeria img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            border-radius: 8px; 
-            border: 2px solid #eee;
-            transition: 0.3s;
-        }
-        .grid-galeria img:hover { transform: scale(1.02); }
+        /* Nav */
+        nav { background: #222; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a.active { color: #ff9800; }
 
-        /* Listado de Servicios */
-        .servicios-lista { padding: 50px 20px; background: #f9f9f9; text-align: center; }
-        .listado-servicios-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 12px;
-            max-width: 1100px;
-            margin: 30px auto;
-        }
-        .servicio-item {
+        /* Hero */
+        .hero { background: #1a237e; color: white; text-align: center; padding: 60px 20px; }
+        .hero h1 { color: #ff9800; font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        .btn-call { background: #ff9800; color: #222; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-right: 10px; display: inline-block; }
+        .btn-whatsapp { background: #25d366; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; }
+
+        /* Trabajos Recientes (image_1e265d.jpg) */
+        .section-title { text-align: center; margin: 50px 0 30px; font-weight: 800; font-size: 1.8rem; }
+        .trabajos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto 50px; padding: 0 20px; }
+        .trabajos-grid img { width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Servicios (image_1e263a.png) */
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .servicio-card { background: #fff; padding: 15px; display: flex; align-items: center; border-left: 4px solid #ff9800; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .servicio-card i { color: #ff9800; margin-right: 15px; font-size: 1.2rem; }
+        .servicio-card span { font-weight: bold; font-size: 0.95rem; }
+
+        /* Testimonios (image_1e2619.png) */
+        .testimonios-bg { background: #f9f9f9; padding: 50px 20px; border-top: 2px solid #ff9800; }
+        .testimonios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: auto; }
+        .testimonio-card { background: white; padding: 30px; border-radius: 10px; border-left: 5px solid #ff9800; box-shadow: 0 5px 20px rgba(0,0,0,0.05); position: relative; }
+        .stars { color: #ffc107; margin-bottom: 15px; }
+
+        /* Marcas y Pueblos (image_1e25e0.png) */
+        .marcas-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 1000px; margin: auto; padding-bottom: 50px; }
+        .marca-item { background: #f8f9fa; border: 1px solid #eee; padding: 8px 25px; border-radius: 5px; font-weight: 800; font-size: 0.85rem; color: #444; }
+        
+        .pueblos-section { background: #f0f0f0; padding: 60px 20px; text-align: center; }
+        .pueblos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; max-width: 1100px; margin: auto; }
+        .pueblo-btn { background: #333; color: white; padding: 12px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 0.8rem; }
+
+        /* SECCIÓN MAPA Y CONTACTO (image_1e25be.png) */
+        .map-contact-section { background: white; padding: 60px 20px; }
+        .map-container-flex { 
+            display: flex; 
+            max-width: 900px; 
+            margin: auto; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            overflow: hidden;
             background: white;
-            padding: 18px;
-            border-left: 5px solid #ff9800;
-            text-align: left;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            font-size: 0.95rem;
         }
-        .servicio-item i { color: #ff9800; margin-right: 12px; font-size: 1.2rem; }
+        .info-panel { flex: 1; padding: 40px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .info-panel h3 { font-size: 1.5rem; margin-bottom: 20px; font-weight: 800; }
+        .info-panel p { color: #ff9800; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
+        .info-panel .phone-link { font-size: 1.4rem; font-weight: 900; color: #222; text-decoration: none; margin-bottom: 20px; }
+        .social-icons a { font-size: 1.5rem; margin: 0 10px; color: #333; }
 
-        /* Marcas */
-        .marcas-seccion { padding: 50px 20px; text-align: center; background: #fff; }
-        .marcas-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            max-width: 1000px;
-            margin: 25px auto 0;
-        }
-        .marca-item {
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 6px;
-            font-weight: 800;
-            color: #444;
-            background: #fafafa;
-            font-size: 0.8rem;
-        }
+        .map-panel { flex: 1; min-height: 400px; }
 
-        /* Zonas y Pueblos */
-        .zonas-servicio { padding: 50px 20px; text-align: center; background-color: #f4f4f4; }
-        .grid-pueblos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 10px;
-            max-width: 1100px;
-            margin: 25px auto 0;
-        }
-        .btn-pueblo {
-            display: block;
-            padding: 12px 8px;
-            background-color: #333;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.75rem;
-            transition: 0.3s;
-        }
-        .btn-pueblo:hover { background-color: #ff9800; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
 
-        /* Reseñas */
-        .testimonio-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: left;
-            margin-bottom: 15px;
-        }
-        .stars { color: #fbbc05; margin-bottom: 8px; }
-        .user-name { font-weight: bold; display: block; margin-top: 8px; color: #555; }
-
-        @media (max-width: 480px) {
-            .grid-pueblos { grid-template-columns: 1fr 1fr; }
-            .grid-galeria { grid-template-columns: 1fr 1fr; }
-            nav.main-nav a { margin: 0 5px; font-size: 0.7rem; }
+        @media (max-width: 768px) {
+            .map-container-flex { flex-direction: column; }
+            .hero h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="assets/image_1.png" alt="Apertura Expres Cerrajeros Paiporta">
-        </a>
-    </div>
-    <div class="header-info">
-        <span>Cerrajero urgente 24h en <b>Paiporta</b></span>
-        <a href="tel:+34633909755">633 90 97 55</a>
+    <div class="logo"><img src="logo.png" alt="Apertura Expres"></div>
+    <div class="header-contact">
+        <p>Cerrajero urgente 24h en <strong>Paiporta</strong></p>
+        <a href="tel:633909755" class="phone">633 90 97 55</a>
     </div>
 </header>
 
-<nav class="main-nav">
-    <a href="index.html">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#zonas">Zonas</a>
-    <a href="blog.html" style="color: #ff9800;">Blog</a>
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Zonas</a>
+    <a href="#" style="color:#ff9800">Blog</a>
 </nav>
 
 <section class="hero">
-    <h1>Cerrajero en Paiporta 24 Horas</h1>
+    <h1>CERRAJERO EN PAIPORTA 24 HORAS</h1>
     <p>Servicio rápido y profesional en Paiporta. Llegamos en menos de 20 minutos.</p>
-
-    <div class="cta-buttons">
-        <a href="tel:+34633909755" class="btn btn-tel">
-            <i class="fas fa-phone-alt"></i> LLAMAR AHORA
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=34633909755&text=Hola,%20necesito%20un%20cerrajero%20en%20Paiporta" class="btn btn-wa" target="_blank">
-            <i class="fab fa-whatsapp"></i> WHATSAPP
-        </a>
+    <div class="hero-btns">
+        <a href="tel:633909755" class="btn-call"><i class="fas fa-phone"></i> LLAMAR AHORA</a>
+        <a href="https://wa.me/34633909755" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
     </div>
 </section>
 
-<!-- GALERÍA DE TRABAJOS RECIENTES -->
-<section class="galeria-trabajos">
-    <h2>Trabajos Recientes de Apertura Expres</h2>
-    <div class="grid-galeria">
-        <img src="assets/bombillo.jpg" alt="Cambio de bombín en Paiporta">
-        <img src="assets/cerradura.jpg" alt="Instalación de cerradura">
-        <img src="assets/cerrojo.jpg" alt="Cerrojo de seguridad">
-        <img src="assets/inteligente.jpg" alt="Cerradura digital">
-    </div>
-</section>
+<h2 class="section-title">Trabajos Recientes de Apertura Expres</h2>
+<div class="trabajos-grid">
+    <img src="t1.jpg" alt="Trabajo 1">
+    <img src="t2.jpg" alt="Trabajo 2">
+    <img src="t3.jpg" alt="Trabajo 3">
+    <img src="t4.jpg" alt="Trabajo 4">
+</div>
 
-<!-- LISTADO DE 13 SERVICIOS PROFESIONALES -->
-<section class="servicios-lista" id="servicios">
-    <h2>Nuestros Servicios Profesionales</h2>
-    <div class="listado-servicios-container">
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Apertura de puertas</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cambio de bombín</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación de cerrojos</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación y cambio de cerraduras</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Mantenimiento de puertas</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Servicio de urgencias 24h</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Bombines de alta seguridad</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Escudos protectores</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cerraduras inteligentes</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cerrojos invisibles</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación de mirillas digitales</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Puertas blindadas y acorazadas</div>
-        <div class="servicio-item"><i class="fas fa-check-circle"></i> Extracción de llaves rotas</div>
-    </div>
-</section>
+<h2 class="section-title">Nuestros Servicios Profesionales</h2>
+<div class="servicios-grid">
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Apertura de puertas</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Cambio de bombín</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Instalación de cerrojos</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Instalación y cambio de cerraduras</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Mantenimiento de puertas</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Servicio de urgencias 24h</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Bombines de alta seguridad</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Escudos protectores</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Cerraduras inteligentes</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Cerrojos invisibles</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Instalación de mirillas digitales</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Puertas blindadas y acorazadas</span></div>
+    <div class="servicio-card"><i class="fas fa-check-circle"></i><span>Extracción de llaves rotas</span></div>
+</div>
 
-<!-- RESEÑAS REALES -->
-<section class="testimonios" id="testimonios" style="padding: 50px 20px; text-align: center;">
-    <h2>Lo que dicen nuestros clientes</h2>
-    <div class="grid-testimonios" style="max-width: 1000px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+<section class="testimonios-bg">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="testimonios-grid">
         <div class="testimonio-card">
             <div class="stars">★★★★★</div>
-            <p>"Fran es muy amable y servicial. Me ha dado un servicio de 10, tanto en calidad como en rapidez. Ante cualquier emergencia, ya sé a quién acudir."</p>
-            <span class="user-name">- Samuel A.</span>
+            <p>"Fran es muy amable y servicial. Me ha dado un servicio de 10..."</p>
+            <strong>- Samuel A.</strong>
         </div>
         <div class="testimonio-card">
             <div class="stars">★★★★★</div>
-            <p>"Fran es una gran profesional. Vino a mi casa de urgencia porque no podíamos abrir la puerta, y me solucionó el problema muy rápidamente. Muy recomendable!"</p>
-            <span class="user-name">- Lucia L.</span>
+            <p>"Fran es una gran profesional. Vino a mi casa de urgencia..."</p>
+            <strong>- Lucia L.</strong>
         </div>
         <div class="testimonio-card">
             <div class="stars">★★★★★</div>
-            <p>"Llamé a Fran por una urgencia con nuestra cerradura y en menos de 20 minutos estaba en nuestra puerta. No podríamos estar más contentos con su profesionalidad."</p>
-            <span class="user-name">- Pablo R.</span>
+            <p>"Llamé a Fran por una urgencia con nuestra cerradura y en menos de 20 min..."</p>
+            <strong>- Pablo R.</strong>
         </div>
     </div>
 </section>
 
-<!-- MARCAS -->
-<section class="marcas-seccion">
-    <h2>Marcas que Trabajamos</h2>
-    <div class="marcas-container">
-        <div class="marca-item">ABUS</div><div class="marca-item">TESA</div><div class="marca-item">M&C</div>
-        <div class="marca-item">KESO</div><div class="marca-item">MAUER</div><div class="marca-item">AMIG</div>
-        <div class="marca-item">LINCE</div><div class="marca-item">KABA</div><div class="marca-item">YALE</div>
-        <div class="marca-item">CISA</div><div class="marca-item">AZBE</div><div class="marca-item">SAG</div>
-        <div class="marca-item">FAC</div><div class="marca-item">DISEC</div><div class="marca-item">DIERRE</div>
+<h2 class="section-title">Marcas que Trabajamos</h2>
+<div class="marcas-container">
+    <div class="marca-item">ABUS</div><div class="marca-item">TESA</div><div class="marca-item">M&C</div>
+    <div class="marca-item">KESO</div><div class="marca-item">MAUER</div><div class="marca-item">AMIG</div>
+    <div class="marca-item">LINCE</div><div class="marca-item">KABA</div><div class="marca-item">YALE</div>
+    <div class="marca-item">CISA</div><div class="marca-item">AZBE</div><div class="marca-item">SAG</div>
+    <div class="marca-item">FAC</div><div class="marca-item">DISEC</div><div class="marca-item">DIERRE</div>
+</div>
+
+<section class="pueblos-section">
+    <h2 class="section-title">También Atendemos en:</h2>
+    <div class="pueblos-grid">
+        <a href="#" class="pueblo-btn">PICANYA</a><a href="#" class="pueblo-btn">MASSANASSA</a>
+        <a href="#" class="pueblo-btn">CATARROJA</a><a href="#" class="pueblo-btn">BENETÚSSER</a>
+        <a href="#" class="pueblo-btn">SEDAVÍ</a><a href="#" class="pueblo-btn">TORRENT</a>
+        <a href="#" class="pueblo-btn">BENIPARRELL</a><a href="#" class="pueblo-btn">ALFAFAR</a>
+        <a href="#" class="pueblo-btn">PICASSENT</a><a href="#" class="pueblo-btn">XIRIVELLA</a>
+        <a href="#" class="pueblo-btn">ALBAL</a><a href="#" class="pueblo-btn">LA TORRE</a>
+        <a href="#" class="pueblo-btn">SILLA</a><a href="#" class="pueblo-btn">ALCÀSSER</a>
+        <a href="#" class="pueblo-btn">ALAQUÁS</a><a href="#" class="pueblo-btn">ALDAIA</a>
+        <a href="#" class="pueblo-btn">VALENCIA</a>
     </div>
 </section>
 
-<!-- ZONAS DE SERVICIO (17 PUEBLOS) -->
-<section class="zonas-servicio" id="zonas">
-    <h2>También Atendemos en:</h2>
-    <div class="grid-pueblos">
-        <a href="cerrajero-picanya.html" class="btn-pueblo">PICANYA</a>
-        <a href="cerrajero-massanassa.html" class="btn-pueblo">MASSANASSA</a>
-        <a href="cerrajero-catarroja.html" class="btn-pueblo">CATARROJA</a>
-        <a href="cerrajero-benetusser.html" class="btn-pueblo">BENETÚSSER</a>
-        <a href="cerrajero-sedavi.html" class="btn-pueblo">SEDAVÍ</a>
-        <a href="cerrajero-torrent.html" class="btn-pueblo">TORRENT</a>
-        <a href="cerrajero-beniparrell.html" class="btn-pueblo">BENIPARRELL</a>
-        <a href="cerrajero-alfafar.html" class="btn-pueblo">ALFAFAR</a>
-        <a href="cerrajero-picassent.html" class="btn-pueblo">PICASSENT</a>
-        <a href="cerrajero-xirivella.html" class="btn-pueblo">XIRIVELLA</a>
-        <a href="cerrajero-albal.html" class="btn-pueblo">ALBAL</a>
-        <a href="cerrajero-la-torre.html" class="btn-pueblo">LA TORRE</a>
-        <a href="cerrajero-silla.html" class="btn-pueblo">SILLA</a>
-        <a href="cerrajero-alcasser.html" class="btn-pueblo">ALCÀSSER</a>
-        <a href="cerrajero-alaquas.html" class="btn-pueblo">ALAQUÁS</a>
-        <a href="cerrajero-aldaia.html" class="btn-pueblo">ALDAIA</a>
-        <a href="cerrajero-valencia.html" class="btn-pueblo">VALENCIA</a>
-    </div>
-</section>
-
-<!-- PIE DE PÁGINA CON MAPA COMPACTO -->
-<section class="footer-top" style="background: #eee; padding: 30px 20px;">
-    <div style="max-width: 900px; margin: auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 20px;">
-        
-        <!-- Bloque de Contacto -->
-        <div class="contact-info" style="flex: 1; min-width: 280px; background: white; padding: 20px; border-radius: 12px; border: 1px solid #ddd; display: flex; flex-direction: column; justify-content: center; text-align: center;">
-            <h3 style="margin: 0 0 10px 0; font-size: 1.1rem; color: #222;">Apertura Expres</h3>
-            <p style="margin: 5px 0; font-size: 0.9rem;"><i class="fas fa-map-marker-alt" style="color: #ff9800;"></i> Av. Francesc Ciscar, 18 bajo, Paiporta</p>
-            <p style="margin: 5px 0; font-size: 0.9rem;"><i class="fas fa-phone-alt" style="color: #ff9800;"></i> <a href="tel:+34633909755" style="text-decoration: none; color: inherit; font-weight: bold;">633 90 97 55</a></p>
-            <div class="redes" style="margin-top: 10px;">
-                <a href="https://www.instagram.com/aperturaexpres/" style="margin: 0 8px; font-size: 1.2rem; color: #333;"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61588647933127" style="margin: 0 8px; font-size: 1.2rem; color: #333;"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@aperturaexpres" style="margin: 0 8px; font-size: 1.2rem; color: #333;"><i class="fab fa-tiktok"></i></a>
+<!-- SECCIÓN FINAL DE CONTACTO Y MAPA (image_1e25be.png) -->
+<section class="map-contact-section">
+    <div class="map-container-flex">
+        <div class="info-panel">
+            <h3>Apertura Expres</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Francesc Ciscar, 18 bajo, Paiporta</p>
+            <a href="tel:633909755" class="phone-link">633 90 97 55</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
-        
-        <!-- Mapa pequeño y alineado -->
-        <div class="map-container" style="flex: 1; min-width: 280px; height: 160px; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #ddd;">
-            <iframe src="https://www.google.com/maps?q=Av.%20Francesc%20Ciscar%2018%20Paiporta&output=embed" width="100%" height="100%" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-panel">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.7483664366!2d-0.4190!3d39.4267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f6e4a!2sAv.%20Francesc%20Ciscar%2C%2018%2C%2046210%20Paiporta%2C%20Valencia!5e0!3m2!1ses!2ses!4v1715620000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-
     </div>
 </section>
 
-<footer style="background: #222; color: white; padding: 15px; text-align: center; font-size: 0.85rem;">
-    <p style="margin: 0;">© 2026 Apertura Expres - Cerrajero 24h en Paiporta</p>
+<footer>
+    <p>© 2026 Apertura Expres - Cerrajero 24h en Paiporta</p>
 </footer>
 
 </body>
