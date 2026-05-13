@@ -7,7 +7,6 @@
 
     <title>Cerrajero 24h en Alaquàs | Apertura Expres | Económico y Rápido</title>
 
-    <!-- SEO Enfocado en Alaquàs -->
     <meta name="description" content="Apertura Expres: Cerrajero urgente 24 horas en Alaquàs. Apertura de puertas sin romper, cambio de cerraduras y bombines de seguridad. Llegamos en 20 min.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,6 +16,7 @@
         /* Estilos consistentes con Index */
         nav.main-nav { background: #222; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav.main-nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
+        nav.main-nav a:hover { color: #ff9800; }
         
         .galeria-trabajos { padding: 40px 20px; background: #fff; text-align: center; }
         .grid-galeria { 
@@ -38,7 +38,30 @@
         }
         .servicio-item i { color: #ff9800; margin-right: 12px; }
 
+        /* Estilos de la cuadrícula de pueblos */
+        .zonas-servicio { padding: 50px 20px; text-align: center; background-color: #f4f4f4; }
+        .grid-pueblos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            max-width: 1100px;
+            margin: 25px auto 0;
+        }
+        .btn-pueblo {
+            display: block;
+            padding: 12px 8px;
+            background-color: #333;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            transition: 0.3s;
+        }
+        .btn-pueblo:hover { background-color: #ff9800; }
+
         @media (max-width: 480px) {
+            .grid-pueblos { grid-template-columns: 1fr 1fr; }
             .grid-galeria { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -61,6 +84,7 @@
 <nav class="main-nav">
     <a href="index.html">Inicio</a>
     <a href="#servicios">Servicios</a>
+    <a href="#zonas">Zonas</a>
     <a href="blog.html">Blog</a>
 </nav>
 
@@ -99,6 +123,30 @@
         <div class="servicio-item"><i class="fas fa-shield-alt"></i> Instalación de cerrojos suplementarios</div>
         <div class="servicio-item"><i class="fas fa-tools"></i> Reparación de cerraduras de todas las marcas</div>
         <div class="servicio-item"><i class="fas fa-clock"></i> Urgencias 24 horas y festivos</div>
+    </div>
+</section>
+
+<!-- ZONAS DE SERVICIO (RECUPERADO) -->
+<section class="zonas-servicio" id="zonas">
+    <h2>También Atendemos en:</h2>
+    <div class="grid-pueblos">
+        <a href="cerrajero-picanya.html" class="btn-pueblo">PICANYA</a>
+        <a href="cerrajero-massanassa.html" class="btn-pueblo">MASSANASSA</a>
+        <a href="cerrajero-catarroja.html" class="btn-pueblo">CATARROJA</a>
+        <a href="cerrajero-benetusser.html" class="btn-pueblo">BENETÚSSER</a>
+        <a href="cerrajero-sedavi.html" class="btn-pueblo">SEDAVÍ</a>
+        <a href="cerrajero-torrent.html" class="btn-pueblo">TORRENT</a>
+        <a href="cerrajero-beniparrell.html" class="btn-pueblo">BENIPARRELL</a>
+        <a href="cerrajero-alfafar.html" class="btn-pueblo">ALFAFAR</a>
+        <a href="cerrajero-picassent.html" class="btn-pueblo">PICASSENT</a>
+        <a href="cerrajero-xirivella.html" class="btn-pueblo">XIRIVELLA</a>
+        <a href="cerrajero-albal.html" class="btn-pueblo">ALBAL</a>
+        <a href="cerrajero-la-torre.html" class="btn-pueblo">LA TORRE</a>
+        <a href="cerrajero-silla.html" class="btn-pueblo">SILLA</a>
+        <a href="cerrajero-alcasser.html" class="btn-pueblo">ALCÀSSER</a>
+        <a href="cerrajero-alaquas.html" class="btn-pueblo">ALAQUÁS</a>
+        <a href="cerrajero-aldaia.html" class="btn-pueblo">ALDAIA</a>
+        <a href="cerrajero-valencia.html" class="btn-pueblo">VALENCIA</a>
     </div>
 </section>
 
