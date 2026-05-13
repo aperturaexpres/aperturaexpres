@@ -5,43 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="format-detection" content="telephone=no"> 
 
-    <title>Cerrajero 24h en Paiporta | Apertura Expres | Urgente 20 min</title>
+    <title>Apertura Expres | Cerrajero 24h Valencia y Alrededores | Urgente 20 min</title>
 
     <!-- SEO -->
-    <meta name="description" content="Cerrajero 24 horas en Paiporta con servicio urgente en menos de 20 minutos. Trabajamos en Picanya, Catarroja, Torrent, Massanassa, Sedaví y Benetússer. Llámanos al 633 90 97 55.">
+    <meta name="description" content="Cerrajero 24 horas urgente en Valencia y alrededores. Especialistas en apertura de puertas, cambio de bombín y seguridad. Llegamos en 20 minutos. Llámanos al 633 90 97 55.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
+        /* Estilos base para las nuevas secciones */
+        nav.main-nav {
+            background: #222;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav.main-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        nav.main-nav a:hover { color: #ff9800; }
+
         .zonas-servicio {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             background-color: #f4f4f4;
         }
         .grid-pueblos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            max-width: 1000px;
-            margin: 20px auto 0;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            max-width: 1100px;
+            margin: 25px auto 0;
         }
         .btn-pueblo {
             display: block;
-            padding: 15px 10px;
+            padding: 12px 8px;
             background-color: #333;
             color: white !important;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: bold;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             transition: 0.3s;
         }
-        .btn-pueblo:hover {
-            background-color: #ff9800;
+        .btn-pueblo:hover { background-color: #ff9800; transform: translateY(-2px); }
+
+        .marcas-seccion {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
         }
+        .marcas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+            max-width: 1000px;
+            margin: 30px auto 0;
+        }
+        .marca-item {
+            padding: 12px 5px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            font-weight: 800;
+            color: #444;
+            background: #fafafa;
+            font-size: 0.85rem;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
         @media (max-width: 480px) {
             .grid-pueblos { grid-template-columns: 1fr 1fr; }
+            nav.main-nav a { margin: 0 8px; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -51,116 +101,202 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="assets/image_1.png" alt="Cerrajero 24 horas en Paiporta Apertura Expres">
+            <img src="assets/image_1.png" alt="Apertura Expres - Cerrajero 24 horas">
         </a>
     </div>
 
     <div class="header-info">
-        <span>Cerrajero urgente 24h en Paiporta y alrededores</span>
+        <span>Cerrajero urgente 24h Valencia y alrededores</span>
         <a href="tel:+34633909755">633 90 97 55</a>
     </div>
 </header>
 
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#zonas">Zonas</a>
+    <a href="blog.html" style="color: #ff9800;">Blog</a>
+</nav>
+
 <section class="hero">
-    <h1>Cerrajero 24 horas en Paiporta</h1>
-    <p>Servicio urgente con llegada en menos de 20 minutos. Apertura de puertas y cambio de cerraduras.</p>
+    <h1>Apertura Expres: Cerrajeros 24 Horas</h1>
+    <p>Servicio profesional urgente. Llegamos en menos de 20 minutos donde nos necesites.</p>
 
     <div class="cta-buttons">
         <a href="tel:+34633909755" class="btn btn-tel">
             <i class="fas fa-phone-alt"></i> LLAMAR AHORA
         </a>
 
-        <a href="https://api.whatsapp.com/send?phone=34633909755&text=Hola,%20necesito%20un%20cerrajero%20en%20Paiporta" class="btn btn-wa" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=34633909755&text=Hola,%20necesito%20un%20cerrajero" class="btn btn-wa" target="_blank">
             <i class="fab fa-whatsapp"></i> WHATSAPP
         </a>
     </div>
 </section>
 
-<!-- TEXTO SEO -->
-<section style="padding:20px; max-width:900px; margin:auto;">
-    <h2>Cerrajero urgente en Paiporta y alrededores</h2>
-    <p>
-    En Apertura Expres ofrecemos servicio de cerrajería 24 horas en Paiporta con atención inmediata para urgencias. Nos desplazamos rápidamente a viviendas y negocios para resolver cualquier problema de cerraduras.
-    </p>
-    <p>
-    También trabajamos en zonas cercanas como Picanya, Catarroja, Torrent, Massanassa, Benetússer y Sedaví, garantizando una llegada en menos de 20 minutos.
-    </p>
+<!-- SECCIÓN SERVICIOS (13 SERVICIOS) -->
+<section class="servicios" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="grid-servicios">
+        <div class="card">
+            <img src="assets/bombillo.jpg" alt="Apertura de puertas">
+            <div class="card-body">
+                <h3>Apertura de Puertas</h3>
+                <p>Aperturas rápidas sin daño de puertas acorazadas y blindadas.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerradura.jpg" alt="Cambio de bombín">
+            <div class="card-body">
+                <h3>Cambio de Bombín</h3>
+                <p>Sustitución de cilindros para mejorar la seguridad de tu hogar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerrojo.jpg" alt="Instalación de cerrojos">
+            <div class="card-body">
+                <h3>Instalación de Cerrojos</h3>
+                <p>Instalamos cerrojos adicionales de alta seguridad.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerradura.jpg" alt="Cambio cerraduras">
+            <div class="card-body">
+                <h3>Instalación y cambio de cerraduras</h3>
+                <p>Servicio técnico para todas las marcas del mercado.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/inteligente.jpg" alt="Mantenimiento">
+            <div class="card-body">
+                <h3>Mantenimiento de puertas</h3>
+                <p>Ajuste y engrase de puertas y sistemas de cierre.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/bombillo.jpg" alt="Urgencias 24h">
+            <div class="card-body">
+                <h3>Servicio de urgencias 24h</h3>
+                <p>Disponibles día y noche, incluso festivos.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/bombillo.jpg" alt="Alta seguridad">
+            <div class="card-body">
+                <h3>Bombines de alta seguridad</h3>
+                <p>Sistemas antibumping, antitaladro y antiganzúa.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerrojo.jpg" alt="Escudos protectores">
+            <div class="card-body">
+                <h3>Escudos protectores</h3>
+                <p>Blindaje exterior para evitar la extracción del bombín.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/inteligente.jpg" alt="Cerraduras inteligentes">
+            <div class="card-body">
+                <h3>Cerraduras inteligentes</h3>
+                <p>Tecnología punta: abre tu puerta con el móvil o código.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerrojo.jpg" alt="Cerrojos invisibles">
+            <div class="card-body">
+                <h3>Cerrojos invisibles</h3>
+                <p>Protección electrónica invisible desde el exterior.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/inteligente.jpg" alt="Mirillas digitales">
+            <div class="card-body">
+                <h3>Mirillas digitales</h3>
+                <p>Instalación de mirillas con pantalla para máxima claridad.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/cerradura.jpg" alt="Puertas blindadas">
+            <div class="card-body">
+                <h3>Puertas blindadas y acorazadas</h3>
+                <p>Instalación y reparación de puertas de alta gama.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/bombillo.jpg" alt="Llaves rotas">
+            <div class="card-body">
+                <h3>Extracción de llaves rotas</h3>
+                <p>Sacamos llaves partidas sin dañar el mecanismo.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="zonas-servicio">
-    <h2>Cerrajero en pueblos cercanos</h2>
-    <p>Accede a tu zona para más información:</p>
+<!-- SECCIÓN MARCAS (15 MARCAS) -->
+<section class="marcas-seccion">
+    <h2>Marcas Profesionales</h2>
+    <div class="marcas-container">
+        <div class="marca-item">ABUS</div>
+        <div class="marca-item">TESA</div>
+        <div class="marca-item">M&C</div>
+        <div class="marca-item">KESO</div>
+        <div class="marca-item">MAUER</div>
+        <div class="marca-item">AMIG</div>
+        <div class="marca-item">LINCE</div>
+        <div class="marca-item">KABA</div>
+        <div class="marca-item">YALE</div>
+        <div class="marca-item">CISA</div>
+        <div class="marca-item">AZBE</div>
+        <div class="marca-item">SAG</div>
+        <div class="marca-item">FAC</div>
+        <div class="marca-item">DISEC</div>
+        <div class="marca-item">DIERRE</div>
+    </div>
+</section>
+
+<!-- SECCIÓN ZONAS (LISTA COMPLETA) -->
+<section class="zonas-servicio" id="zonas">
+    <h2>Cobertura en Valencia y Pueblos</h2>
+    <p>Servicio urgente con llegada en 20 min en:</p>
     <div class="grid-pueblos">
+        <a href="cerrajero-valencia.html" class="btn-pueblo">VALENCIA</a>
+        <a href="cerrajero-torrent.html" class="btn-pueblo">TORRENT</a>
         <a href="cerrajero-picanya.html" class="btn-pueblo">PICANYA</a>
         <a href="cerrajero-massanassa.html" class="btn-pueblo">MASSANASSA</a>
         <a href="cerrajero-catarroja.html" class="btn-pueblo">CATARROJA</a>
         <a href="cerrajero-benetusser.html" class="btn-pueblo">BENETÚSSER</a>
         <a href="cerrajero-sedavi.html" class="btn-pueblo">SEDAVÍ</a>
-        <a href="cerrajero-torrent.html" class="btn-pueblo">TORRENT</a>
         <a href="cerrajero-beniparrell.html" class="btn-pueblo">BENIPARRELL</a>
+        <a href="cerrajero-alfafar.html" class="btn-pueblo">ALFAFAR</a>
+        <a href="cerrajero-picassent.html" class="btn-pueblo">PICASSENT</a>
+        <a href="cerrajero-xirivella.html" class="btn-pueblo">XIRIVELLA</a>
+        <a href="cerrajero-albal.html" class="btn-pueblo">ALBAL</a>
+        <a href="cerrajero-la-torre.html" class="btn-pueblo">LA TORRE</a>
+        <a href="cerrajero-silla.html" class="btn-pueblo">SILLA</a>
+        <a href="cerrajero-alcasser.html" class="btn-pueblo">ALCÀSSER</a>
+        <a href="cerrajero-alacuás.html" class="btn-pueblo">ALACUÁS</a>
+        <a href="cerrajero-aldaya.html" class="btn-pueblo">ALDAYA</a>
     </div>
 </section>
 
-<section class="servicios" id="servicios">
-    <h2>Servicios de cerrajería</h2>
-
-    <div class="grid-servicios">
-        <div class="card">
-            <img src="assets/bombillo.jpg" alt="Bombillos de seguridad en Paiporta">
-            <div class="card-body">
-                <h3>Bombillos de Seguridad</h3>
-                <p>Instalación de bombillos antibumping y sistemas de alta seguridad.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="assets/cerradura.jpg" alt="Cambio de cerraduras">
-            <div class="card-body">
-                <h3>Cambio de Cerraduras</h3>
-                <p>Sustitución rápida de cerraduras en viviendas y negocios.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="assets/cerrojo.jpg" alt="Cerrojos de seguridad">
-            <div class="card-body">
-                <h3>Cerrojos de Seguridad</h3>
-                <p>Refuerza tu puerta con sistemas adicionales anti-okupas.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="assets/inteligente.jpg" alt="Cerraduras inteligentes">
-            <div class="card-body">
-                <h3>Cerraduras Inteligentes</h3>
-                <p>Control de acceso digital desde el móvil.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- TESTIMONIOS -->
 <section class="testimonios" id="testimonios">
-    <h2>Opiniones reales de clientes</h2>
-
+    <h2>Opiniones reales</h2>
     <div class="grid-testimonios">
         <div class="testimonio-card">
-            <p>"Muy rápido, vino en menos de 15 minutos. Profesional y económico."</p>
+            <p>"Vino muy rápido a Catarroja y me abrió la puerta sin romper nada. Muy profesional."</p>
         </div>
-
         <div class="testimonio-card">
-            <p>"Servicio excelente en Paiporta. Me abrió la puerta sin romper nada."</p>
+            <p>"Excelente cerrajero en Torrent. Precio justo y trato inmejorable."</p>
         </div>
-
         <div class="testimonio-card">
-            <p>"Recomendable 100%. Rápido, serio y disponible a cualquier hora."</p>
+            <p>"Nos instaló un bombín antibumping en Albal y ahora dormimos mucho más tranquilos."</p>
         </div>
     </div>
 </section>
 
 <section class="footer-top">
     <div class="contact-info">
-        <h3>Apertura Expres Cerrajero Paiporta</h3>
-
+        <h3>Apertura Expres Cerrajero</h3>
         <p><i class="fas fa-map-marker-alt"></i> Av. Francesc Ciscar, 18 bajo, Paiporta</p>
         <p><i class="fas fa-phone-alt"></i> <a href="tel:+34633909755">633 90 97 55</a></p>
 
@@ -182,7 +318,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Apertura Expres - Cerrajero 24h en Paiporta</p>
+    <p>© 2026 Apertura Expres - Cerrajero 24h</p>
 </footer>
 
 </body>
