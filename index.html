@@ -8,12 +8,13 @@
     <title>Cerrajero 24h en Paiporta | Apertura Expres | Urgente 20 min</title>
 
     <!-- SEO Enfocado en Paiporta -->
-    <meta name="description" content="Cerrajero 24 horas en Paiporta. Apertura Expres ofrece servicio urgente en menos de 20 minutos. Especialistas en aperturas, bombines y seguridad en Paiporta y alrededores. Llámanos al 633 90 97 55.">
+    <meta name="description" content="Apertura Expres: Cerrajero 24 horas en Paiporta. Especialistas en apertura de puertas, bombines de alta seguridad y urgencias. Llegamos en 20 min. Llámanos al 633 90 97 55.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
+        /* Navegación */
         nav.main-nav {
             background: #222;
             padding: 12px;
@@ -32,11 +33,68 @@
         }
         nav.main-nav a:hover { color: #ff9800; }
 
-        .zonas-servicio {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #f4f4f4;
+        /* Galería de Trabajos Reales */
+        .galeria-trabajos { padding: 40px 20px; background: #fff; text-align: center; }
+        .grid-galeria { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 15px; 
+            max-width: 1100px; 
+            margin: 20px auto; 
         }
+        .grid-galeria img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            border: 2px solid #eee;
+            transition: 0.3s;
+        }
+        .grid-galeria img:hover { transform: scale(1.02); }
+
+        /* Listado de Servicios */
+        .servicios-lista { padding: 50px 20px; background: #f9f9f9; text-align: center; }
+        .listado-servicios-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+        .servicio-item {
+            background: white;
+            padding: 18px;
+            border-left: 5px solid #ff9800;
+            text-align: left;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .servicio-item i { color: #ff9800; margin-right: 12px; font-size: 1.2rem; }
+
+        /* Marcas */
+        .marcas-seccion { padding: 50px 20px; text-align: center; background: #fff; }
+        .marcas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            max-width: 1000px;
+            margin: 25px auto 0;
+        }
+        .marca-item {
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            font-weight: 800;
+            color: #444;
+            background: #fafafa;
+            font-size: 0.8rem;
+        }
+
+        /* Zonas y Pueblos */
+        .zonas-servicio { padding: 50px 20px; text-align: center; background-color: #f4f4f4; }
         .grid-pueblos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -55,53 +113,24 @@
             font-size: 0.75rem;
             transition: 0.3s;
         }
-        .btn-pueblo:hover { background-color: #ff9800; transform: translateY(-2px); }
+        .btn-pueblo:hover { background-color: #ff9800; }
 
-        .marcas-seccion {
-            padding: 50px 20px;
-            text-align: center;
-            background: #fff;
-        }
-        .marcas-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 12px;
-            max-width: 1000px;
-            margin: 30px auto 0;
-        }
-        .marca-item {
-            padding: 12px 5px;
-            border: 1px solid #eee;
-            border-radius: 6px;
-            font-weight: 800;
-            color: #444;
-            background: #fafafa;
-            font-size: 0.85rem;
-        }
-
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* Estilo para las reseñas reales */
+        /* Reseñas */
         .testimonio-card {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: left;
+            margin-bottom: 15px;
         }
-        .stars { color: #fbbc05; margin-bottom: 10px; }
-        .user-name { font-weight: bold; display: block; margin-top: 10px; color: #555; }
+        .stars { color: #fbbc05; margin-bottom: 8px; }
+        .user-name { font-weight: bold; display: block; margin-top: 8px; color: #555; }
 
         @media (max-width: 480px) {
             .grid-pueblos { grid-template-columns: 1fr 1fr; }
-            nav.main-nav a { margin: 0 8px; font-size: 0.75rem; }
+            .grid-galeria { grid-template-columns: 1fr 1fr; }
+            nav.main-nav a { margin: 0 5px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -111,10 +140,9 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="assets/image_1.png" alt="Apertura Expres - Cerrajero 24 horas Paiporta">
+            <img src="assets/image_1.png" alt="Apertura Expres Cerrajeros Paiporta">
         </a>
     </div>
-
     <div class="header-info">
         <span>Cerrajero urgente 24h en <b>Paiporta</b></span>
         <a href="tel:+34633909755">633 90 97 55</a>
@@ -130,43 +158,53 @@
 
 <section class="hero">
     <h1>Cerrajero en Paiporta 24 Horas</h1>
-    <p>Tu cerrajero de confianza en Paiporta. Llegamos en menos de 20 minutos para cualquier urgencia.</p>
+    <p>Servicio rápido y profesional en Paiporta. Aperturas y cerraduras con llegada en 20 minutos.</p>
 
     <div class="cta-buttons">
         <a href="tel:+34633909755" class="btn btn-tel">
             <i class="fas fa-phone-alt"></i> LLAMAR AHORA
         </a>
-
         <a href="https://api.whatsapp.com/send?phone=34633909755&text=Hola,%20necesito%20un%20cerrajero%20en%20Paiporta" class="btn btn-wa" target="_blank">
             <i class="fab fa-whatsapp"></i> WHATSAPP
         </a>
     </div>
 </section>
 
-<!-- SECCIÓN SERVICIOS -->
-<section class="servicios" id="servicios">
-    <h2>Servicios de Cerrajería en Paiporta</h2>
-    <div class="grid-servicios">
-        <div class="card"><img src="assets/bombillo.jpg" alt="Apertura"><div class="card-body"><h3>Apertura de Puertas</h3><p>Abrimos sin romper en Paiporta.</p></div></div>
-        <div class="card"><img src="assets/cerradura.jpg" alt="Bombín"><div class="card-body"><h3>Cambio de Bombín</h3><p>Mejora la seguridad de tu hogar hoy mismo.</p></div></div>
-        <div class="card"><img src="assets/cerrojo.jpg" alt="Cerrojos"><div class="card-body"><h3>Instalación de Cerrojos</h3><p>Puntos extra de seguridad para tu puerta.</p></div></div>
-        <div class="card"><img src="assets/cerradura.jpg" alt="Cerraduras"><div class="card-body"><h3>Cambio de Cerraduras</h3><p>Reparación e instalación de todas las marcas.</p></div></div>
-        <div class="card"><img src="assets/inteligente.jpg" alt="Mantenimiento"><div class="card-body"><h3>Mantenimiento de Puertas</h3><p>Ajustes y engrase profesional.</p></div></div>
-        <div class="card"><img src="assets/bombillo.jpg" alt="Urgencias"><div class="card-body"><h3>Servicio Urgencias 24h</h3><p>Atención inmediata en Paiporta y alrededores.</p></div></div>
-        <div class="card"><img src="assets/bombillo.jpg" alt="Alta Seguridad"><div class="card-body"><h3>Bombines de alta seguridad</h3><p>Sistemas antibumping y antitaladro.</p></div></div>
-        <div class="card"><img src="assets/cerrojo.jpg" alt="Escudos"><div class="card-body"><h3>Escudos Protectores</h3><p>Evita que extraigan tu bombín.</p></div></div>
-        <div class="card"><img src="assets/inteligente.jpg" alt="Inteligentes"><div class="card-body"><h3>Cerraduras Inteligentes</h3><p>Apertura con móvil o teclado numérico.</p></div></div>
-        <div class="card"><img src="assets/cerrojo.jpg" alt="Invisibles"><div class="card-body"><h3>Cerrojos Invisibles</h3><p>La seguridad que no se ve desde fuera.</p></div></div>
-        <div class="card"><img src="assets/inteligente.jpg" alt="Mirillas"><div class="card-body"><h3>Mirillas Digitales</h3><p>Mira quién llama con total claridad.</p></div></div>
-        <div class="card"><img src="assets/cerradura.jpg" alt="Puertas"><div class="card-body"><h3>Puertas Blindadas y Acorazadas</h3><p>Instalación experta en Paiporta.</p></div></div>
-        <div class="card"><img src="assets/bombillo.jpg" alt="Extracción"><div class="card-body"><h3>Extracción de llaves rotas</h3><p>Sacamos llaves partidas sin dañar la cerradura.</p></div></div>
+<!-- GALERÍA DE TRABAJOS REALES -->
+<section class="galeria-trabajos">
+    <h2>Trabajos Recientes de Apertura Expres</h2>
+    <div class="grid-galeria">
+        <img src="assets/bombillo.jpg" alt="Cambio de bombín en Paiporta">
+        <img src="assets/cerradura.jpg" alt="Instalación de cerradura">
+        <img src="assets/cerrojo.jpg" alt="Cerrojo de seguridad">
+        <img src="assets/inteligente.jpg" alt="Cerradura digital">
     </div>
 </section>
 
-<!-- RESEÑAS REALES -->
-<section class="testimonios" id="testimonios">
-    <h2>Reseñas de nuestros clientes</h2>
-    <div class="grid-testimonios">
+<!-- LISTADO DE SERVICIOS -->
+<section class="servicios-lista" id="servicios">
+    <h2>Nuestros Servicios Profesionales</h2>
+    <div class="listado-servicios-container">
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Apertura de puertas</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cambio de bombín</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación de cerrojos</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación y cambio de cerraduras</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Mantenimiento de puertas</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Servicio de urgencias 24h</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Bombines de alta seguridad</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Escudos protectores</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cerraduras inteligentes</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Cerrojos invisibles</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Instalación de mirillas digitales</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Puertas blindadas y acorazadas</div>
+        <div class="servicio-item"><i class="fas fa-check-circle"></i> Extracción de llaves rotas</div>
+    </div>
+</section>
+
+<!-- RESEÑAS DE GOOGLE -->
+<section class="testimonios" id="testimonios" style="padding: 50px 20px; text-align: center;">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="grid-testimonios" style="max-width: 1000px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
         <div class="testimonio-card">
             <div class="stars">★★★★★</div>
             <p>"Rápido y muy profesional. Me quedé fuera de casa y en 15 minutos estaba en Paiporta solucionándolo. Muy recomendable."</p>
@@ -183,12 +221,11 @@
             <span class="user-name">- Maria V.</span>
         </div>
     </div>
-    <p style="margin-top:20px;"><a href="https://www.google.com/search?q=Apertura+Expres+Cerrajero+Paiporta+Reseñas" target="_blank" style="color:#ff9800; font-weight:bold;">Ver todas las reseñas en Google</a></p>
 </section>
 
 <!-- MARCAS -->
 <section class="marcas-seccion">
-    <h2>Marcas que trabajamos</h2>
+    <h2>Marcas que Trabajamos</h2>
     <div class="marcas-container">
         <div class="marca-item">ABUS</div><div class="marca-item">TESA</div><div class="marca-item">M&C</div>
         <div class="marca-item">KESO</div><div class="marca-item">MAUER</div><div class="marca-item">AMIG</div>
@@ -198,9 +235,9 @@
     </div>
 </section>
 
-<!-- ZONAS -->
+<!-- ZONAS DE SERVICIO -->
 <section class="zonas-servicio" id="zonas">
-    <h2>También damos servicio en:</h2>
+    <h2>También Atendemos en:</h2>
     <div class="grid-pueblos">
         <a href="cerrajero-picanya.html" class="btn-pueblo">PICANYA</a>
         <a href="cerrajero-massanassa.html" class="btn-pueblo">MASSANASSA</a>
@@ -224,10 +261,9 @@
 
 <section class="footer-top">
     <div class="contact-info">
-        <h3>Apertura Expres Cerrajero Paiporta</h3>
+        <h3>Apertura Expres Cerrajero</h3>
         <p><i class="fas fa-map-marker-alt"></i> Av. Francesc Ciscar, 18 bajo, Paiporta</p>
         <p><i class="fas fa-phone-alt"></i> <a href="tel:+34633909755">633 90 97 55</a></p>
-
         <div class="redes">
             <a href="https://www.instagram.com/aperturaexpres/"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/profile.php?id=61588647933127"><i class="fab fa-facebook"></i></a>
@@ -240,7 +276,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Apertura Expres - Tu Cerrajero en Paiporta</p>
+    <p>© 2026 Apertura Expres - Cerrajero en Paiporta 24h</p>
 </footer>
 
 </body>
